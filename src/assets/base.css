@@ -1,0 +1,34 @@
+html {
+  scroll-behavior: smooth;
+}
+  body {
+    font-family: 'Fira Code', monospace;
+    font-size: 15px;
+    background-color: #1E112F;
+    margin-right: 32px;
+    margin-left: 32px;
+  }
+  a:hover {
+    color: #E6B221;
+    /* color: #C778DD; */
+  }
+  
+
+  .bg-custom-orange {
+    background-color: #ff5722;
+  }
+  
+  .bg-custom-darkblue {
+    background-color: #171E36;
+  }
+
+  .text-custom-purple {
+    color: #C778DD;
+  }
+
+  .text-custom-orange {
+    color: #E6B221;
+  }
+  .border-custom-orange {
+    border-color: #E6B221;
+  }
