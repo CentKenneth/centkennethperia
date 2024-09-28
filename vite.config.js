@@ -11,5 +11,5 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  base: '/', // For custom domain, serves from root.
+  base: '/centkenenthperia/', // For custom domain, serves from root.
 });
