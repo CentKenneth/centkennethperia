@@ -8,8 +8,8 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
     }
   },
-  base: '/centkenenthperia/', // For custom domain, serves from root.
+  base: '/centkennethperia/', // Ensure this matches your GitHub repo name.
 });
