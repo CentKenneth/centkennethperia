@@ -7,7 +7,7 @@
         <h1 class="text-white  font-bold ">projects</h1>
       </div>
       
-      <a href="#" class="text-gray-400 hover:text-custom-orange">View all &rarr;</a>
+      <a href="https://github.com/CentKenneth" class="text-gray-400 hover:text-custom-orange">View all &rarr;</a>
     </div>
     <!-- Projects Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -20,11 +20,11 @@
           <p class="text-gray-400 mt-1">{{ project.description }}</p>
         </div>
         <div class="flex justify-between items-center px-4 py-3 bg-gray-700">
-          <a :href="project.liveLink" class="text-gray-300 hover:text-white flex items-center">
+          <a :href="project.liveLink" class="text-gray-300 hover:text-custom-orange flex items-center">
             Live <span class="ml-2">⤷</span>
           </a>
-          <a :href="project.cachedLink" v-if="project.cachedLink" class="text-gray-300 hover:text-white flex items-center">
-            Cached <span class="ml-2">⤷</span>
+          <a :href="project.GithubLink" v-if="project.GithubLink" class="text-gray-300 hover:text-custome-orange flex items-center">
+            Github <span class="ml-2">⤷</span>
           </a>
         </div>
       </div>
@@ -33,6 +33,9 @@
 </template>
 
 <script>
+import smartlifeImage from '../assets/images/smartlife.png'
+import menncImage from '../assets/images/mennc.png'
+import pharmacy from '../assets/images/pharmacy.png'
 export default {
   name: 'ProjectSection',
   data() {
@@ -40,30 +43,30 @@ export default {
       projects: [
         {
           id: 1,
-          image: 'https://via.placeholder.com/400x150',
+          image: smartlifeImage,
           tags: ['HTML', 'CSS', 'BOOTSTRAP', 'PHP'],
           name: 'SmartLifeMicroPre-Need',
-          description: 'Minecraft servers hosting',
+          description: 'Business management system',
           liveLink: 'https://smartlifemicropre-need.com/home.php',
-          cachedLink: '#',
+          GithubLink: 'https://github.com/CentKenneth/smartlife',
         },
         {
           id: 2,
-          image: 'https://via.placeholder.com/400x150',
-          tags: ['React', 'Express', 'Node.js'],
-          name: 'ProtectX',
-          description: 'Discord anti-crash bot',
-          liveLink: '#',
-          cachedLink: null,
+          image: menncImage,
+          tags: ['VUEJS', 'VUETIFY', 'NUXT', 'LARAVEL'],
+          name: 'MENNC Healthcare',
+          description: 'Web Mobile app for optical clinic',
+          liveLink: 'http://meenc-system.surge.sh/',
+          GithubLink:'https://github.com/CentKenneth',
         },
         {
           id: 3,
-          image: 'https://via.placeholder.com/400x150',
-          tags: ['CSS', 'Express', 'Node.js'],
-          name: 'Kahoot Answers Viewer',
-          description: 'Get answers to your kahoot quiz',
-          liveLink: '#',
-          cachedLink: null,
+          image: pharmacy,
+          tags: ['FIGMA', 'PHOTOSHOP'],
+          name: 'Donna Mae Pharmacy',
+          description: 'UI/UX DESIGN',
+          liveLink: 'https://www.figma.com/proto/ED3gtjfLHIIV4xwksHOInh/DM-PMIS?node-id=5-2&starting-point-node-id=5%3A2&t=8E3RosfCtcuoYBqe-1',
+          GithubLink: null,
         },
       ],
     };

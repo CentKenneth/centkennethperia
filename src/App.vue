@@ -4,7 +4,6 @@
   <HeroSection/>
   <QuoteSection/>
   <ProjectSection/>
-  <SkillSection/>
 </div>
 </template>
 
