@@ -1,13 +1,12 @@
 <template>
-  <section id="projects" class="min-h-screen p-32">
+  <section id="projects" class="min-h-screen p-4 md:p-8 lg:p-16">
     <!-- Header -->
-    <div class="flex justify-between items-center mb-8">
-      <div class="flex items-center space-x-1 text-2xl ">
+    <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+      <div class="flex items-center space-x-1 text-2xl">
         <p class="text-custom-orange">#</p>
-        <h1 class="text-white  font-bold ">projects</h1>
+        <h1 class="text-white font-bold">projects</h1>
       </div>
-      
-      <a href="https://github.com/CentKenneth" class="text-gray-400 hover:text-custom-orange">View all &rarr;</a>
+      <a href="https://github.com/CentKenneth" class="text-gray-400 hover:text-custom-orange mt-2 md:mt-0">View all &rarr;</a>
     </div>
     <!-- Projects Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -19,11 +18,11 @@
           <h3 class="text-white text-xl font-semibold">{{ project.name }}</h3>
           <p class="text-gray-400 mt-1">{{ project.description }}</p>
         </div>
-        <div class="flex justify-between items-center px-4 py-3 bg-gray-700">
-          <a :href="project.liveLink" class="text-gray-300 hover:text-custom-orange flex items-center">
+        <div class="flex flex-col sm:flex-row justify-between items-center px-4 py-3 bg-gray-700">
+          <a :href="project.liveLink" class="text-gray-300 hover:text-custom-orange flex items-center mb-2 sm:mb-0">
             Live <span class="ml-2">⤷</span>
           </a>
-          <a :href="project.GithubLink" v-if="project.GithubLink" class="text-gray-300 hover:text-custome-orange flex items-center">
+          <a :href="project.GithubLink" v-if="project.GithubLink" class="text-gray-300 hover:text-custom-orange flex items-center">
             Github <span class="ml-2">⤷</span>
           </a>
         </div>
@@ -33,9 +32,10 @@
 </template>
 
 <script>
-import smartlifeImage from '../assets/images/smartlife.png'
-import menncImage from '../assets/images/mennc.png'
-import pharmacy from '../assets/images/pharmacy.png'
+import smartlifeImage from '../assets/images/smartlife.png';
+import menncImage from '../assets/images/mennc.png';
+import pharmacy from '../assets/images/pharmacy.png';
+
 export default {
   name: 'ProjectSection',
   data() {
@@ -57,7 +57,7 @@ export default {
           name: 'MENNC Healthcare',
           description: 'Web Mobile app for optical clinic',
           liveLink: 'http://meenc-system.surge.sh/',
-          GithubLink:'https://github.com/CentKenneth',
+          GithubLink: 'https://github.com/CentKenneth',
         },
         {
           id: 3,
