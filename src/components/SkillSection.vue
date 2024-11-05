@@ -6,6 +6,7 @@
         <p class="text-custom-orange">#</p>
         <h1 class="text-white font-bold">skills</h1>
       </div>
+      <a href="https://github.com/CentKenneth" class="text-gray-400 hover:text-custom-orange mt-2 md:mt-0">View all &rarr;</a>
     </div>
     
     <!-- Skills Grid -->
@@ -44,51 +45,57 @@ export default {
         {
           title: 'Back-end',
           skills: [
-            { name: 'PHP', icon: 'devicon-php-plain', percentage: 85 },
+            { name: 'PHP', icon: 'devicon-php-plain', percentage: 95 },
             { name: 'Java', icon: 'devicon-java-plain', percentage: 80 },
-            { name: 'Laravel', icon: 'devicon-laravel-plain', percentage: 75 },
+            { name: 'Laravel', icon: 'devicon-laravel-plain', percentage: 70 },
           ],
         },
-        {
-          title: 'Front-end',
-          skills: [
-            { name: 'HTML', icon: 'devicon-html5-plain', percentage: 95 },
-            { name: 'CSS', icon: 'devicon-css3-plain', percentage: 90 },
-            { name: 'JS', icon: 'devicon-javascript-plain', percentage: 90 },
-            { name: 'SCSS', icon: 'devicon-sass-original', percentage: 70 },
-            { name: 'Vue', icon: 'devicon-vuejs-plain', percentage: 90 },
-            { name: 'Tailwind', icon: 'devicon-tailwindcss-plain', percentage: 90 },
-          ],
-        },
+        
         {
         title: 'Databases',
           skills: [
             { name: 'SQLyog', icon: 'fas fa-database', percentage: 75 },
-            { name: 'MySQL', icon: 'devicon-mysql-plain', percentage: 85 },
+            { name: 'MySQL', icon: 'devicon-mysql-plain', percentage: 95 },
           ],
         },
        
         {
           title: 'Version Control',
           skills: [
-            { name: 'Github', icon: 'devicon-github-original', percentage: 90 },
+            { name: 'Github', icon: 'devicon-github-original', percentage: 98 },
             { name: 'GitLab', icon: 'devicon-gitlab-plain', percentage: 85 },
             { name: 'Git', icon: 'devicon-git-plain', percentage: 95 },
           ],
         },
         {
-          title: 'Prject Management',
+          title: 'Front-end',
           skills: [
-            { name: 'Jira', icon: 'devicon-jira-plain', percentage: 80 },
+            { name: 'HTML', icon: 'devicon-html5-plain', percentage: 100 },
+            { name: 'CSS', icon: 'devicon-css3-plain', percentage: 90 },
+            { name: 'JS', icon: 'devicon-javascript-plain', percentage: 90 },
+            { name: 'SCSS', icon: 'devicon-sass-original', percentage: 70 },
+            { name: 'Vue', icon: 'devicon-vuejs-plain', percentage: 89 },
+            { name: 'Tailwind', icon: 'devicon-tailwindcss-plain', percentage: 85 },
+          ],
+        },
+        {
+          title: 'Project Management / Tools',
+          skills: [
+            { name: 'Jira', icon: 'devicon-jira-plain', percentage: 85 },
+            { name: 'VSCode', icon: 'devicon-vscode-plain', percentage: 95 },
+            { name: 'Figma', icon: 'devicon-figma-plain', percentage: 85 },
+            { name: 'Git', icon: 'devicon-git-plain', percentage: 90 },
            
           ],
         },
          {
-          title: 'Tools',
+          title: 'Others',
           skills: [
-            { name: 'VSCode', icon: 'devicon-vscode-plain', percentage: 95 },
-            { name: 'Figma', icon: 'devicon-figma-plain', percentage: 70 },
-            { name: 'Git', icon: 'devicon-git-plain', percentage: 90 },
+            { name: 'Canva', icon: 'devicon-canva-plain', percentage: 95 },
+            { name: 'Lucidchart', icon: 'fas fa-diagram-project', percentage: 100 },
+            { name: 'Photoshop', icon: 'devicon-photoshop-plain', percentage: 75 },
+            { name: 'Network Configuration', icon: 'fas fa-network-wired', percentage: 89 },
+            { name: 'Computer troubleshooting', icon: 'fas fa-tools', percentage: 95 },
           ],
         },
       ],

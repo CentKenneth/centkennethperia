@@ -11,14 +11,14 @@
     <!-- Projects Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Project Card -->
-      <div v-for="project in projects" :key="project.id" class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+      <div v-for="project in projects" :key="project.id" class="bg-[#1E112F] rounded-lg shadow-lg overflow-hidden">
         <img :src="project.image" alt="Project Image" class="w-full h-40 object-cover">
         <div class="p-4">
           <p class="text-gray-400 text-sm mb-2">{{ project.tags.join(' ') }}</p>
           <h3 class="text-white text-xl font-semibold">{{ project.name }}</h3>
           <p class="text-gray-400 mt-1">{{ project.description }}</p>
         </div>
-        <div class="flex flex-col sm:flex-row justify-between items-center px-4 py-3 bg-gray-700">
+        <div class="flex flex-col sm:flex-row justify-between items-center px-4 py-3 bg-[#171E36]">
           <a :href="project.liveLink" class="text-gray-300 hover:text-custom-orange flex items-center mb-2 sm:mb-0">
             Live <span class="ml-2">⤷</span>
           </a>

@@ -1,8 +1,8 @@
 <template>
-  <nav class="p-4">
+  <nav class="p-4 shadow-lg">
     <div class="flex justify-between items-center">
       <!-- Logo Section -->
-      <div class="flex items-center ml-4 sm:ml-8 lg:ml-28">
+      <div class="flex items-center ml-4 sm:ml-8 lg:ml-14">
         <img src="@/assets/images/logo.png" alt="Cent" class="h-10" />
         <h1 class="text-white font-bold ml-2 text-lg sm:text-xl">Cent</h1>
       </div>
@@ -17,10 +17,10 @@
       </div>
 
       <!-- Navigation Links for Large Screens -->
-      <div class="hidden lg:flex items-center space-x-6 mr-4 sm:mr-8 lg:mr-32">
+      <div class="hidden lg:flex items-center space-x-6 mr-4 sm:mr-8 lg:mr-14">
         <div class="flex items-center space-x-1">
           <p class="text-custom-orange">#</p>
-          <a @click.prevent="scrollToSection('home')" class="text-white cursor-pointer">home</a>
+          <router-link to="/" class="text-white cursor-pointer">home</router-link>
         </div>
         <div class="flex items-center space-x-1">
           <p class="text-custom-orange">#</p>
@@ -30,18 +30,10 @@
           <p class="text-custom-orange">#</p>
           <a @click.prevent="scrollToSection('skills')" class="text-white cursor-pointer">skills</a>
         </div>
-        <div class="flex items-center space-x-1">
+        <!-- <div class="flex items-center space-x-1">
           <p class="text-custom-orange">#</p>
-          <a @click.prevent="scrollToSection('works')" class="text-white cursor-pointer">works</a>
-        </div>
-        <div class="flex items-center space-x-1">
-          <p class="text-custom-orange">#</p>
-          <a @click.prevent="scrollToSection('education')" class="text-white cursor-pointer">education</a>
-        </div>
-        <div class="flex items-center space-x-1">
-          <p class="text-custom-orange">#</p>
-          <a @click.prevent="scrollToSection('about')" class="text-white cursor-pointer">about</a>
-        </div>
+          <router-link to="/about" class="text-white cursor-pointer">about</router-link>
+        </div> -->
       </div>
     </div>
 
@@ -50,7 +42,7 @@
       <div class="flex flex-col space-y-2">
         <div class="flex items-center space-x-1">
           <p class="text-custom-orange">#</p>
-          <a @click.prevent="scrollToSection('home')" class="text-white cursor-pointer">home</a>
+          <router-link to="/home" class="text-white cursor-pointer">home</router-link>
         </div>
         <div class="flex items-center space-x-1">
           <p class="text-custom-orange">#</p>
@@ -62,15 +54,7 @@
         </div>
         <div class="flex items-center space-x-1">
           <p class="text-custom-orange">#</p>
-          <a @click.prevent="scrollToSection('works')" class="text-white cursor-pointer">works</a>
-        </div>
-        <div class="flex items-center space-x-1">
-          <p class="text-custom-orange">#</p>
-          <a @click.prevent="scrollToSection('education')" class="text-white cursor-pointer">education</a>
-        </div>
-        <div class="flex items-center space-x-1">
-          <p class="text-custom-orange">#</p>
-          <a @click.prevent="scrollToSection('about')" class="text-white cursor-pointer">about</a>
+          <router-link to="/about" class="text-white cursor-pointer">about</router-link>
         </div>
       </div>
     </div>
@@ -95,3 +79,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.custom-shadow {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adjust the shadow values as needed */
+}
+</style>

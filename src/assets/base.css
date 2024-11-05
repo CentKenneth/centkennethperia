@@ -1,34 +1,72 @@
 html {
   scroll-behavior: smooth;
 }
-  body {
-    font-family: 'Fira Code', monospace;
-    font-size: 15px;
-    background-color: #1E112F;
-    margin-right: 32px;
-    margin-left: 32px;
-  }
-  a:hover {
-    color: #E6B221;
-    /* color: #C778DD; */
-  }
-  
 
-  .bg-custom-orange {
-    background-color: #E6B221;
-  }
-  
-  .bg-custom-darkblue {
-    background-color: #171E36;
-  }
+body {
+  font-family: 'Fira Code', monospace;
+  font-size: 15px;
+  position: relative;
+  background: linear-gradient(120deg, #1E112F, #1E112F, #C778DD, #171E36, #1F1F3B);
+  background-size: 200% 200%;
+  animation: gradientFlow 15s ease-in-out infinite;
+  color: #E6E6E6; /* Lighter text color to ensure visibility */
+  /* padding: ; Adds padding for smaller screens */
+  margin: 0;
+}
 
-  .text-custom-purple {
-    color: #C778DD;
-  }
+/* Overlay to darken the background */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+  z-index: -1;
+}
 
-  .text-custom-orange {
-    color: #E6B221;
+/* Background animation keyframes */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
   }
-  .border-custom-orange {
-    border-color: #E6B221;
+  50% {
+    background-position: 100% 50%;
   }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Hover effect for links */
+a:hover {
+  color: #E6B221;
+}
+
+.bg-custom-orange {
+  background-color: #E6B221;
+}
+
+.bg-custom-darkblue {
+  background-color: #171E36;
+}
+
+.text-custom-purple {
+  color: #C778DD;
+}
+.bg-custom-lightpurple {
+  background-color: #C778DD;
+}
+
+.text-custom-orange {
+  color: #E6B221;
+}
+
+.border-custom-orange {
+  border-color: #E6B221;
+}
+
+.bg-hover-custom-purple {
+  color: #C778DD;
+}
