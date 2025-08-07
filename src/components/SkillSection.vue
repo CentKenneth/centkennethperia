@@ -46,8 +46,8 @@ export default {
           title: 'Back-end',
           skills: [
             { name: 'PHP', icon: 'devicon-php-plain', percentage: 95 },
-            { name: 'Java', icon: 'devicon-java-plain', percentage: 80 },
-            { name: 'Laravel', icon: 'devicon-laravel-plain', percentage: 70 },
+            { name: 'Java', icon: 'devicon-java-plain', percentage: 85 },
+            { name: 'Laravel', icon: 'devicon-laravel-plain', percentage: 95 },
           ],
         },
         
@@ -73,15 +73,17 @@ export default {
             { name: 'HTML', icon: 'devicon-html5-plain', percentage: 100 },
             { name: 'CSS', icon: 'devicon-css3-plain', percentage: 90 },
             { name: 'JS', icon: 'devicon-javascript-plain', percentage: 90 },
-            { name: 'SCSS', icon: 'devicon-sass-original', percentage: 70 },
-            { name: 'Vue', icon: 'devicon-vuejs-plain', percentage: 89 },
+            {name: 'TS', icon: 'devicon-typescript-plain', percentage: 80 },
+            { name: 'Bootstrap', icon: 'devicon-bootstrap-plain', percentage: 90 },
             { name: 'Tailwind', icon: 'devicon-tailwindcss-plain', percentage: 85 },
+            { name: 'Vue.js', icon: 'devicon-vuejs-plain', percentage: 90 },
+            { name: 'PrimeVue', icon: 'devicon-primeng-plain', percentage: 85 },
           ],
         },
         {
           title: 'Project Management / Tools',
           skills: [
-            { name: 'Jira', icon: 'devicon-jira-plain', percentage: 85 },
+            { name: 'Jira', icon: 'devicon-jira-plain', percentage: 100 },
             { name: 'VSCode', icon: 'devicon-vscode-plain', percentage: 95 },
             { name: 'Figma', icon: 'devicon-figma-plain', percentage: 85 },
             { name: 'Git', icon: 'devicon-git-plain', percentage: 90 },
