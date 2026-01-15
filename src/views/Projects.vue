@@ -16,6 +16,7 @@ import menncImage from '../assets/images/mennc.png'
 import pharmacy from '../assets/images/pharmacy.png'
 import starbuilders from '../assets/images/starbuilderspc.png'
 import rmci from '../assets/images/rmci.png'
+import kates from '../assets/images/kates.png'
 
 interface Project {
   id: number
@@ -43,12 +44,12 @@ const projects = ref<Project[]>([
       'MySQL'
     ],
     name: 'Rhean Motor Center INC.',
-    description: 'A fully responsive web-application system for Inventory Management, Point of Sale, Loan Management, and AI Powered Decision Support System',
+    description: 'A fully responsive web-application system for Inventory Management, Point of Sale, Loan Management, and Decision Support System',
     liveLink: 'https://rheanmotorcenter.com',
   },
   {
     id: 2,
-    image: starbuilders,
+    image: kates,
     tags: [
       'Laravel 12',
       'Vue.js',
@@ -60,9 +61,9 @@ const projects = ref<Project[]>([
       'Lucide Icons',
       'MySQL'
     ],
-    name: 'StarBuilders Construction',
-    description: 'A fully responsive web-based system for managing purchase requests, inventory, and payroll — accessible on both desktop and mobile devices.',
-    liveLink: 'https://starbuilders.ph',
+    name: 'Kates Original Gadgets',
+    description: 'Web-based system for Point of Sales, Sales Report, Manage 20+ Branch, Inventory and Stock Management.',
+    liveLink: 'https://kateoriginalgadgets.com',
   },
   {
     id: 3,
@@ -78,7 +79,7 @@ const projects = ref<Project[]>([
       'Lucide Icons',
       'MySQL'
     ],
-    name: 'StarBuilders Construction',
+    name: 'Starbuilders Construction',
     description: 'A fully responsive web-based system for managing purchase requests, inventory, and payroll — accessible on both desktop and mobile devices.',
     liveLink: 'https://starbuilders.ph',
   },
