@@ -15,6 +15,7 @@ import smartlifeImage from '../assets/images/smartlife.png'
 import menncImage from '../assets/images/mennc.png'
 import pharmacy from '../assets/images/pharmacy.png'
 import starbuilders from '../assets/images/starbuilderspc.png'
+import rmci from '../assets/images/rmci.png'
 
 interface Project {
   id: number
@@ -29,6 +30,24 @@ interface Project {
 const projects = ref<Project[]>([
   {
     id: 1,
+    image: rmci,
+    tags: [
+      'Laravel 12',
+      'Vue.js',
+      'Inertia.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'PrimeVue',
+      'shadcn/ui',
+      'Lucide Icons',
+      'MySQL'
+    ],
+    name: 'Rhean Motor Center INC.',
+    description: 'A fully responsive web-application system for Inventory Management, Point of Sale, Loan Management, and AI Powered Decision Support System',
+    liveLink: 'https://rheanmotorcenter.com',
+  },
+  {
+    id: 2,
     image: starbuilders,
     tags: [
       'Laravel 12',
@@ -41,12 +60,30 @@ const projects = ref<Project[]>([
       'Lucide Icons',
       'MySQL'
     ],
-    name: 'StarBuilders Philippines',
+    name: 'StarBuilders Construction',
     description: 'A fully responsive web-based system for managing purchase requests, inventory, and payroll — accessible on both desktop and mobile devices.',
     liveLink: 'https://starbuilders.ph',
   },
   {
-    id: 2,
+    id: 3,
+    image: starbuilders,
+    tags: [
+      'Laravel 12',
+      'Vue.js',
+      'Inertia.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'PrimeVue',
+      'shadcn/ui',
+      'Lucide Icons',
+      'MySQL'
+    ],
+    name: 'StarBuilders Construction',
+    description: 'A fully responsive web-based system for managing purchase requests, inventory, and payroll — accessible on both desktop and mobile devices.',
+    liveLink: 'https://starbuilders.ph',
+  },
+  {
+    id: 4,
     image: goldenstatelumber,
     tags: ['CodeIgniter', 'CSS', 'BOOTSTRAP', 'Javascript', 'REST'],
     name: 'Golden State Lumber',
@@ -54,7 +91,7 @@ const projects = ref<Project[]>([
     liveLink: 'https://gslwms.jastech.co',
   },
   {
-    id: 3,
+    id: 5,
     image: smartlifeImage,
     tags: ['HTML', 'CSS', 'BOOTSTRAP', 'PHP'],
     name: 'SmartLifeMicroPre-Need',
@@ -63,7 +100,7 @@ const projects = ref<Project[]>([
     GithubLink: 'https://github.com/CentKenneth/smartlife',
   },
   {
-    id: 4,
+    id: 6,
     image: menncImage,
     tags: ['VUEJS', 'VUETIFY', 'NUXT', 'LARAVEL'],
     name: 'MENNC Healthcare',
@@ -72,7 +109,7 @@ const projects = ref<Project[]>([
     GithubLink: 'https://github.com/CentKenneth',
   },
   {
-    id: 5,
+    id: 7,
     image: pharmacy,
     tags: ['FIGMA', 'PHOTOSHOP'],
     name: 'Donna Mae Pharmacy',
@@ -108,7 +145,7 @@ const projects = ref<Project[]>([
           <img :src="project.image" alt="Project Image" class="w-full h-50 object-cover">
 
           <CardHeader>
-            <CardTitle class="text-white">{{ project.name }}</CardTitle>
+            <CardTitle class="text-white text-lg">{{ project.name }}</CardTitle>
             <CardDescription class="text-gray-400">{{ project.description }}</CardDescription>
           </CardHeader>
 

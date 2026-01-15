@@ -38,7 +38,7 @@ import { Button } from '@/components/ui/button'
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mycentkennethperia@gmail.com" target="_blank">
               <Button 
                 variant="outline" 
-                class="border-custom-orange text-white hover:bg-custom-purple/20"
+                class="border-custom-orange text-gray-800 hover:bg-custom-purple/20"
                 size="lg"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-custom-orange" viewBox="0 0 20 20" fill="currentColor">
