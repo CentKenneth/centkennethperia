@@ -216,7 +216,7 @@ export default {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #E6B221;
+  background-color: var(--custom-orange, #E6B221);
   transition: width 0.3s ease;
 }
 
@@ -226,7 +226,7 @@ export default {
 }
 
 .active-link {
-  color: #E6B221;
+  color: var(--custom-orange, #E6B221);
 }
 
 /* Mobile Menu Styles */
@@ -246,7 +246,6 @@ export default {
 }
 
 .mobile-nav-link {
-  display: block;
   padding: 4px 0;
   min-height: 44px;
   display: flex;

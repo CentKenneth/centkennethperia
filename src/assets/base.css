@@ -2,6 +2,12 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --custom-orange: #E6B221;
+  --custom-purple: #C778DD;
+  --custom-darkblue: #171E36;
+}
+
 body {
   font-family: 'Fira Code', monospace;
   font-size: 15px;
