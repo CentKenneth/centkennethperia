@@ -1,8 +1,9 @@
 <template>
     <div>
       <Navbar />
-      <AboutSection />
-
+      <div class="pt-16 md:pt-20">
+        <AboutSection />
+      </div>
     </div>
   </template>
   
