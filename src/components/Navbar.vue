@@ -80,68 +80,94 @@
     <transition name="slide-fade">
       <div
         v-if="isMenuOpen"
-        class="mobile-menu fixed top-0 right-0 w-72 sm:w-80 h-full z-50 shadow-2xl"
+        class="mobile-menu fixed top-0 right-0 w-72 sm:w-80 h-full z-50 shadow-2xl overflow-hidden"
         role="dialog"
         aria-modal="true"
         aria-label="Mobile navigation menu"
       >
+        <!-- Decorative Background Elements -->
+        <div class="menu-bg-decoration"></div>
+        
         <!-- Close Button -->
-        <div class="flex justify-between items-center p-6 border-b border-white/10">
-          <h2 class="text-white text-lg font-bold">Menu</h2>
+        <div class="flex justify-between items-center p-6 border-b border-white/20 relative z-10 backdrop-blur-sm bg-white/5">
+          <div class="flex items-center space-x-2">
+            <div class="w-2 h-2 rounded-full bg-custom-orange animate-pulse"></div>
+            <h2 class="text-white text-lg font-bold tracking-wide">Navigation</h2>
+          </div>
           <button 
             @click="toggleMenu" 
             aria-label="Close menu"
-            class="close-btn p-2 rounded-md hover:bg-white/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-custom-orange"
+            class="close-btn p-2 rounded-lg hover:bg-white/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-custom-orange hover:rotate-90"
           >
-            <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg class="w-6 h-6 text-white transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
 
         <!-- Menu Items -->
-        <nav class="flex flex-col space-y-6 p-6 mt-4">
-          <div class="mobile-nav-item flex items-center space-x-2 group">
-            <span class="text-custom-orange text-lg font-bold">#</span>
-            <router-link 
-              to="/" 
-              @click="toggleMenu" 
-              class="mobile-nav-link text-white text-lg font-medium hover:text-custom-orange transition-colors duration-200 focus:outline-none focus:text-custom-orange"
-            >
-              home
-            </router-link>
+        <nav class="flex flex-col space-y-2 p-6 mt-4 relative z-10">
+          <div class="mobile-nav-item group">
+            <div class="flex items-center space-x-3 p-4 rounded-xl hover:bg-white/5 transition-all duration-300">
+              <span class="text-custom-orange text-xl font-bold group-hover:scale-110 transition-transform duration-200">#</span>
+              <router-link 
+                to="/" 
+                @click="toggleMenu" 
+                class="mobile-nav-link text-white text-lg font-medium hover:text-custom-orange transition-colors duration-200 focus:outline-none focus:text-custom-orange flex-1"
+              >
+                home
+              </router-link>
+              <svg class="w-4 h-4 text-custom-orange opacity-0 group-hover:opacity-100 transition-opacity duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </div>
           </div>
-          <div class="mobile-nav-item flex items-center space-x-2 group">
-            <span class="text-custom-orange text-lg font-bold">#</span>
-            <a 
-              @click.prevent="scrollToSection('projects')" 
-              class="mobile-nav-link text-white text-lg font-medium cursor-pointer hover:text-custom-orange transition-colors duration-200 focus:outline-none focus:text-custom-orange"
-              tabindex="0"
-              @keypress.enter="scrollToSection('projects')"
-            >
-              projects
-            </a>
+          <div class="mobile-nav-item group">
+            <div class="flex items-center space-x-3 p-4 rounded-xl hover:bg-white/5 transition-all duration-300">
+              <span class="text-custom-orange text-xl font-bold group-hover:scale-110 transition-transform duration-200">#</span>
+              <a 
+                @click.prevent="scrollToSection('projects')" 
+                class="mobile-nav-link text-white text-lg font-medium cursor-pointer hover:text-custom-orange transition-colors duration-200 focus:outline-none focus:text-custom-orange flex-1"
+                tabindex="0"
+                @keypress.enter="scrollToSection('projects')"
+              >
+                projects
+              </a>
+              <svg class="w-4 h-4 text-custom-orange opacity-0 group-hover:opacity-100 transition-opacity duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </div>
           </div>
-          <div class="mobile-nav-item flex items-center space-x-2 group">
-            <span class="text-custom-orange text-lg font-bold">#</span>
-            <a 
-              @click.prevent="scrollToSection('skills')" 
-              class="mobile-nav-link text-white text-lg font-medium cursor-pointer hover:text-custom-orange transition-colors duration-200 focus:outline-none focus:text-custom-orange"
-              tabindex="0"
-              @keypress.enter="scrollToSection('skills')"
-            >
-              skills
-            </a>
+          <div class="mobile-nav-item group">
+            <div class="flex items-center space-x-3 p-4 rounded-xl hover:bg-white/5 transition-all duration-300">
+              <span class="text-custom-orange text-xl font-bold group-hover:scale-110 transition-transform duration-200">#</span>
+              <a 
+                @click.prevent="scrollToSection('skills')" 
+                class="mobile-nav-link text-white text-lg font-medium cursor-pointer hover:text-custom-orange transition-colors duration-200 focus:outline-none focus:text-custom-orange flex-1"
+                tabindex="0"
+                @keypress.enter="scrollToSection('skills')"
+              >
+                skills
+              </a>
+              <svg class="w-4 h-4 text-custom-orange opacity-0 group-hover:opacity-100 transition-opacity duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </div>
           </div>
-          <div class="mobile-nav-item flex items-center space-x-2 group">
-            <span class="text-custom-orange text-lg font-bold">#</span>
-            <router-link 
-              to="/about" 
-              @click="toggleMenu" 
-              class="mobile-nav-link text-white text-lg font-medium hover:text-custom-orange transition-colors duration-200 focus:outline-none focus:text-custom-orange"
-            >
-              about
-            </router-link>
+          <div class="mobile-nav-item group">
+            <div class="flex items-center space-x-3 p-4 rounded-xl hover:bg-white/5 transition-all duration-300">
+              <span class="text-custom-orange text-xl font-bold group-hover:scale-110 transition-transform duration-200">#</span>
+              <router-link 
+                to="/about" 
+                @click="toggleMenu" 
+                class="mobile-nav-link text-white text-lg font-medium hover:text-custom-orange transition-colors duration-200 focus:outline-none focus:text-custom-orange flex-1"
+              >
+                about
+              </router-link>
+              <svg class="w-4 h-4 text-custom-orange opacity-0 group-hover:opacity-100 transition-opacity duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </div>
           </div>
         </nav>
       </div>
@@ -231,18 +257,70 @@ export default {
 
 /* Mobile Menu Styles */
 .mobile-menu {
-  background: linear-gradient(135deg, #1E112F 0%, #2A0A4F 50%, #1E112F 100%);
-  border-left: 2px solid rgba(199, 120, 221, 0.3);
+  background: linear-gradient(135deg, 
+    rgba(30, 17, 47, 0.98) 0%, 
+    rgba(42, 10, 79, 0.98) 25%,
+    rgba(199, 120, 221, 0.15) 50%,
+    rgba(42, 10, 79, 0.98) 75%,
+    rgba(30, 17, 47, 0.98) 100%
+  );
+  border-left: 3px solid transparent;
+  border-image: linear-gradient(to bottom, 
+    rgba(199, 120, 221, 0.8), 
+    rgba(230, 178, 33, 0.8),
+    rgba(199, 120, 221, 0.8)
+  ) 1;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  position: relative;
+}
+
+/* Decorative Background */
+.menu-bg-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(199, 120, 221, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(230, 178, 33, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(199, 120, 221, 0.1) 0%, transparent 40%);
+  animation: pulse-glow 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
 }
 
 .mobile-nav-item {
-  padding: 8px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  transition: transform 0.2s ease;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mobile-nav-item:hover {
-  transform: translateX(8px);
+.mobile-nav-item::before {
+  content: '';
+  position: absolute;
+  left: -24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 0;
+  background: linear-gradient(to bottom, var(--custom-orange, #E6B221), var(--custom-purple, #C778DD));
+  transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px;
+}
+
+.mobile-nav-item:hover::before {
+  height: 60%;
 }
 
 .mobile-nav-link {
@@ -250,6 +328,22 @@ export default {
   min-height: 44px;
   display: flex;
   align-items: center;
+  position: relative;
+}
+
+.mobile-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--custom-orange, #E6B221), transparent);
+  transition: width 0.3s ease;
+}
+
+.mobile-nav-link:hover::after {
+  width: 100%;
 }
 
 /* Buttons */
@@ -260,6 +354,21 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.close-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(230, 178, 33, 0.2) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.close-btn:hover::before {
+  opacity: 1;
 }
 
 /* Animations */
