@@ -106,6 +106,10 @@ a:hover {
   background-color: #C778DD;
 }
 
+.bg-custom-purple {
+  background-color: #1E112F;
+}
+
 .text-custom-orange {
   color: #E6B221;
 }
@@ -117,4 +121,3 @@ a:hover {
 .bg-hover-custom-purple {
   color: #C778DD;
 }
-
