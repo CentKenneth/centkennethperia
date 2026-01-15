@@ -1,11 +1,13 @@
 <template>
     <div>
       <Navbar />
-      <HeroSection />
-      <QuoteSection />
-      <ProjectSection />
-      <SkillSection />
-      <Footer />
+      <div class="pt-16 md:pt-20">
+        <HeroSection />
+        <QuoteSection />
+        <ProjectSection />
+        <SkillSection />
+        <Footer />
+      </div>
     </div>
   </template>
   
