@@ -86,7 +86,7 @@
         aria-label="Mobile navigation menu"
       >
         <!-- Decorative Background Elements -->
-        <div class="menu-bg-decoration"></div>
+        <div class="menu-bg-decoration" aria-hidden="true"></div>
         
         <!-- Close Button -->
         <div class="flex justify-between items-center p-6 border-b border-white/20 relative z-10 backdrop-blur-sm bg-white/5">
@@ -117,7 +117,7 @@
               >
                 home
               </router-link>
-              <svg class="w-4 h-4 text-custom-orange opacity-0 group-hover:opacity-100 transition-opacity duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="menu-arrow" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
               </svg>
             </div>
@@ -133,7 +133,7 @@
               >
                 projects
               </a>
-              <svg class="w-4 h-4 text-custom-orange opacity-0 group-hover:opacity-100 transition-opacity duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="menu-arrow" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
               </svg>
             </div>
@@ -149,7 +149,7 @@
               >
                 skills
               </a>
-              <svg class="w-4 h-4 text-custom-orange opacity-0 group-hover:opacity-100 transition-opacity duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="menu-arrow" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
               </svg>
             </div>
@@ -164,7 +164,7 @@
               >
                 about
               </router-link>
-              <svg class="w-4 h-4 text-custom-orange opacity-0 group-hover:opacity-100 transition-opacity duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="menu-arrow" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
               </svg>
             </div>
@@ -322,6 +322,20 @@ export default {
 .mobile-nav-item:hover::before {
   height: 60%;
 }
+
+/* Menu Arrow Icon */
+.menu-arrow {
+  width: 1rem;
+  height: 1rem;
+  color: var(--custom-orange, #E6B221);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.mobile-nav-item:hover .menu-arrow {
+  opacity: 1;
+}
+
 
 .mobile-nav-link {
   padding: 4px 0;
