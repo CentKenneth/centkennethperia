@@ -5,7 +5,7 @@
       <div class="flex flex-col items-start space-y-6 lg:max-w-lg">
         <h1 class="font-bold text-2xl sm:text-3xl lg:text-4xl text-center lg:text-left">
           <span class="text-white">Cent is a </span>
-          <span class="text-custom-orange">Web Developer</span> <span class="text-white">and</span>
+          <span class="text-custom-orange">Web Application Developer</span> <span class="text-white">and</span>
           <br><span class="text-custom-orange">UI/UX Designer</span>
         </h1>
         <p class="text-gray-400 max-w-full text-center lg:text-left text-base sm:text-lg leading-relaxed">
