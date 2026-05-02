@@ -17,6 +17,7 @@ import pharmacy from '../assets/images/pharmacy.png'
 import starbuilders from '../assets/images/starbuilderspc.png'
 import rmci from '../assets/images/rmci.png'
 import kates from '../assets/images/kates.png'
+import cpdo_doctrack from '../assets/images/cpdo_doctrack.png'
 
 interface Project {
   id: number
@@ -29,6 +30,14 @@ interface Project {
 }
 
 const projects = ref<Project[]>([
+{
+  id: 1,
+  image: cpdo_doctrack,
+  tags: ['MySQL', 'VILT'],
+  name: 'Document Tracking System (Government Project)',
+  description: 'Developed a web-based document tracking system for a government office to improve document monitoring, status tracking, and workflow efficiency. (Details limited due to confidentiality.)',
+  liveLink: ''
+},
   {
     id: 1,
     image: rmci,
